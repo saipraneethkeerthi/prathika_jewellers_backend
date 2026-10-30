@@ -487,7 +487,7 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/prathika-
     };
     const reservationTimer = setInterval(expireReservations, 60_000);
     reservationTimer.unref();
-    app.listen(port, () => console.log(`Prathika API listening on http://localhost:${port}`));
+    // app.listen(port, () => console.log(`Prathika API listening on http://localhost:${port}`));
   })
   .catch((error) => {
     console.error("Could not connect to MongoDB:", error.message);
